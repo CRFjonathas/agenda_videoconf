@@ -1,0 +1,399 @@
+/* Importa a fonte Roboto com diferentes pesos do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Define estilo geral para o corpo da página */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Define a fonte padrão */
+    font-weight: 400; /* Peso regular da fonte */
+    font-size: 16px; /* Tamanho padrão do texto */
+    margin: 0; /* Remove espaçamento externo padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    background-color: #f5f2e7; /* Cor de fundo clara */
+    color: #333; /* Cor do texto */
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+    transition: background-color 0.4s ease, color 0.4s ease; /* Transição suave ao mudar modo claro/escuro */
+}
+
+/* Modo escuro - muda fundo e cor do texto */
+body.dark-mode {
+    background-color: #121212;
+    color: #ddd;
+}
+
+/* Estiliza o cabeçalho principal da página */
+header {
+    background-color: #1b2d1b; /* Cor de fundo escura */
+    color: #d9ffcc; /* Cor do texto no cabeçalho */
+    padding: 20px 40px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo */
+    border-bottom: 5px solid #3d5c3d; /* Linha na parte inferior */
+    transition: background-color 0.4s ease, color 0.4s ease; /* Transição suave */
+    position: relative; /* Permite posicionar elementos dentro, como botão */
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+}
+
+/* Cabeçalho em modo escuro */
+body.dark-mode header {
+    background-color: #0e180e;
+    color: #a0d0a0;
+    border-color: #264326;
+}
+
+/* Estilo do título principal (h1) */
+h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.2;
+}
+
+/* Botão que ativa/desativa o modo escuro */
+#btn-dark-mode {
+    position: absolute; /* Posicionado dentro do cabeçalho */
+    right: 40px; /* Distância da borda direita */
+    top: 26px; /* Distância do topo */
+    padding: 4px 10px; /* Espaçamento interno reduzido */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: none; /* Sem borda */
+    background: #507f50; /* Cor verde */
+    color: #fff; /* Texto branco */
+    cursor: pointer; /* Ícone de mão ao passar o mouse */
+    font-size: 0.85em; /* Tamanho reduzido da fonte */
+    display: flex; /* Flexbox para alinhar ícone e texto */
+    align-items: center;
+    gap: 4px; /* Espaço entre ícone e texto */
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 500;
+    height: 32px;
+    line-height: 1;
+}
+
+/* Hover no botão */
+#btn-dark-mode:hover {
+    background-color: #3e6c3e;
+}
+
+/* Botão no modo escuro */
+body.dark-mode #btn-dark-mode {
+    background-color: #6aa96e;
+    color: #222;
+}
+
+/* Hover no modo escuro */
+body.dark-mode #btn-dark-mode:hover {
+    background-color: #559955;
+}
+
+/* Rodapé da página */
+footer {
+    background-color: #1b2d1b;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Rodapé em modo escuro */
+body.dark-mode footer {
+    background-color: #0e180e;
+    color: #888;
+}
+
+/* Área do formulário no topo da página */
+.formulario {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Formulário no modo escuro */
+body.dark-mode .formulario {
+    background-color: #1e1e1e;
+    border-color: #444;
+}
+
+/* Campos e botão do formulário */
+.formulario input,
+.formulario button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Roboto', Arial, sans-serif;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Input no modo escuro */
+body.dark-mode .formulario input {
+    background-color: #2b2b2b;
+    border-color: #555;
+    color: #eee;
+}
+
+/* Input em foco no modo escuro */
+body.dark-mode .formulario input:focus {
+    border-color: #6aa96e;
+    box-shadow: 0 0 5px rgba(106, 169, 110, 0.7);
+    background-color: #334433;
+}
+
+/* Input em foco modo claro */
+.formulario input:focus {
+    outline: none;
+    border-color: #507f50;
+    box-shadow: 0 0 5px rgba(80, 127, 80, 0.5);
+}
+
+/* Botão do formulário */
+.formulario button {
+    background-color: #507f50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 500;
+}
+
+/* Hover no botão */
+.formulario button:hover {
+    background-color: #3e6c3e;
+}
+
+/* Botão no modo escuro */
+body.dark-mode .formulario button {
+    background-color: #6aa96e;
+    color: #222;
+}
+
+body.dark-mode .formulario button:hover {
+    background-color: #559955;
+}
+
+/* Ícones nos botões */
+.formulario button i {
+    font-size: 1em;
+    vertical-align: middle;
+}
+
+/* Títulos secundários */
+h2 {
+    font-size: 1.4em;
+    margin: 30px 40px 10px;
+    color: #1e3a1e;
+    transition: color 0.4s ease;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 500;
+}
+
+body.dark-mode h2 {
+    color: #8fbc8f;
+}
+
+/* Container da tabela com sombra */
+.tabela-wrapper {
+    overflow-x: auto;
+    margin: 0 40px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeSlideDown 0.6s forwards;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Tabela no modo escuro */
+body.dark-mode .tabela-wrapper {
+    background-color: #222;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Animação da tabela ao carregar */
+@keyframes fadeSlideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    transition: color 0.4s ease;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Cabeçalho da tabela */
+thead th {
+    background-color: #7a9e7a;
+    color: #fff;
+    text-align: left;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode thead th {
+    background-color: #5c865c;
+}
+
+/* Links nos cabeçalhos */
+thead th a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Hover nos links */
+thead th a:hover {
+    opacity: 0.8;
+}
+
+/* Células da tabela */
+tbody td {
+    padding: 12px;
+    border-top: 1px solid #ddd;
+    font-size: 0.95em;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 400;
+}
+
+body.dark-mode tbody td {
+    border-top: 1px solid #444;
+    color: #ccc;
+}
+
+/* Linhas alternadas */
+tbody tr:nth-child(even) {
+    background-color: #f3f7f3;
+}
+
+body.dark-mode tbody tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+tbody tr:hover {
+    background-color: #e8f0e8;
+}
+
+body.dark-mode tbody tr:hover {
+    background-color: #3a4a3a;
+}
+
+/* Botões editar e excluir */
+.btn-editar, .btn-excluir {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #507f50;
+    font-size: 1.1em;
+    margin-right: 8px;
+    transition: color 0.3s ease;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Hover nos botões */
+.btn-editar:hover {
+    color: #3e6c3e;
+    background-color: #d5edd5;
+}
+
+.btn-excluir:hover {
+    color: #a33;
+    background-color: #f5d5d5;
+}
+
+/* Botões no modo escuro */
+body.dark-mode .btn-editar {
+    color: #6aa96e;
+}
+
+body.dark-mode .btn-editar:hover {
+    background-color: #335533;
+    color: #b9e7b9;
+}
+
+body.dark-mode .btn-excluir {
+    color: #d66;
+}
+
+body.dark-mode .btn-excluir:hover {
+    background-color: #551111;
+    color: #f88;
+}
+
+/* Linha com atividade marcada como realizada */
+.realizado {
+    opacity: 0.7;
+    background-color: #e6f3e6;
+}
+
+body.dark-mode .realizado {
+    background-color: #3a4a3a;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .formulario {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+    }
+
+    .tabela-wrapper {
+        margin: 0 10px;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
